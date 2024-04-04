@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  
+  <title>{% block title %} {% endblock title %}</title>
+   <style>
+     .sub-menu {
+    display: none; /* Hide submenu by default */
+    position: absolute;
+    background-color: #fff; /* Background color for the submenu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle effect */
+    padding: 10px;
+    z-index: 1; /* Ensure submenu appears above other elements */
+}
+ul {
+  list-style-type: none;
+}
+
+.nav-item:hover .sub-menu {
+    display: block; /* Show submenu when hovering over the parent menu item */
+}
+   </style>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'core/css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'core/css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'core/css/responsive.css' %}" rel="stylesheet" />
+ 
+    <body class="sub_page">
+        <div class="hero_area">
+          <!-- header section strats -->
+          <header class="header_section">
+            <div class="container">
+              <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                  <img src="{% static 'core/images/logo1.png' %}" alt="" />
+                  <span>
+                    Learner Hub
+                  </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+      
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                    <ul class="navbar-nav  ">
+                      <li class="nav-item ">
+                        <a class="nav-link" href="{% url 'index' %}">
+                          Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'about' %}"> About </a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'program' %}"> Programs </a>
+                        <!-- Add submenu here -->
+                        <ul id="subMenu" class="sub-menu">
+                          <li><a href="#">Paper Crafts</a></li>
+                          <li><a href="#">Recycled Crafts</a></li>
+                          <li><a href="#">Art Projects</a></li>
+                          <li><a href="#">Science Experiments:</a></li>
+                          <li><a href="#">Cooking and Baking</a></li>
+                          <li><a href="#">Gardening:</a></li>
+                          <li><a href="#">DIY Fashion</a></li>
+                          <li><a href="#">Painting</a></li>
+                          <li><a href="#">English Phonics</a></li>
+                          <li><a href="#">Coding</a></li>
+                          <li><a href="#">Fun with circuits</a></li>
+                          
+                            <!-- Add more programming languages as needed -->
+                        </ul>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}"> Contact us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </header>
+          <!-- end header section -->
+      
+        </div>
+    <div class="main_div1">
+        
+        {% block content1 %} {% endblock content1 %}
+        {% block content2 %} {% endblock content2 %}
+        
+    </div>
+    
+</body>
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
+  
+</script>
+
+</html>

@@ -1,0 +1,163 @@
+{% extends "core/base1.html" %}
+
+{% block content1 %}
+{% load static %}   
+
+  <!-- about section -->
+  <section class="about_section ">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{% static 'core/images/about-img.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                A Few words about us
+              </h2>
+            </div>
+            <p>
+              we aim to inspire creativity and imagination through engaging 
+              activities tailored to their interests and abilities.
+              We believe in empowering children to embrace their unique talents and abilities, helping them build confidence, resilience, and a lifelong love for learning.oin us on a journey of discovery and self-expression as we unlock the potential of every child and create cherished memories that last a lifetime.At our hobby classes for kids, we aim to inspire creativity and imagination through engaging activities tailored to their interests and abilities.
+            </p>
+            <div>
+              <a href="">
+                Read More
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- end about section -->
+
+
+
+
+  <!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="info_form">
+
+        <div class="row">
+          <div class="offset-lg-3 col-lg-3">
+            <h5 class="form_heading">
+              Newsletter
+            </h5>
+          </div>
+          <div class="col-md-6">
+            <form action="#">
+              <input type="text" placeholder="Enter Your email">
+              <button>
+                subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info_logo">
+            <div>
+              <a href="">
+                <img src=" {% static 'core/images/logo1.png' %}" alt="" />
+                
+              </a>
+            </div>
+            <h5>Learning Hub</h5>
+              
+            
+          </div>
+        </div>
+        <div class="col-md-4">
+          
+            <h5>
+              Contact Us
+            </h5>           
+              <p class="pr-0 pr-md-4 pr-md-5">
+                <p>Email: testwork801@gmail.com</p>
+                <p>Phone: +91 8197682773</p>
+                <p>Address: India (Bangalore)</p>
+              </p>
+           
+         
+        </div>
+        <div class="col-md-4">
+          <h5>
+            WHO WE ARE
+          </h5>
+          <div class="col-md-3">
+            <p href="{% url 'about' %}">AboutUs</p>
+            <p>OurTeam</p>
+            <!-- Add more WHO WE ARE links as needed -->
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+ 
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static 'core/js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'core/js/bootstrap.js' %}"></script>
+
+  <script>
+    // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+    // Australia.
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 11,
+        center: {
+          lat: 40.645037,
+          lng: -73.880224
+        }
+      });
+
+      var image = "{% static 'core/images/maps-and-flags.png' %}";
+      var beachMarker = new google.maps.Marker({
+        position: {
+          lat: 40.645037,
+          lng: -73.880224
+        },
+        map: map,
+        icon: image
+      });
+    }
+  </script>
+  <!-- google map js -->
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
+  </script>
+  <!-- end google map js -->
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+
+
+{% endblock content1 %}
+
+

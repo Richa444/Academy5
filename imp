@@ -1,0 +1,49 @@
+python3 -m venv env_academy
+source env_academy/bin/activate
+deactivate
+python --version 
+python -m pip install Django
+pip install -r requirements.txt
+pip freeze -l > requirements.txt
+django-admin startproject tutions
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3  manage.py createsuperuser, user-shiv, pswd-shiv, shiv@gmail.com@
+message sent to other user nice,pswd -nice.
+pip install geocoder
+
+---
+1.git init
+2.git add .
+3.git status
+4.git commit -m "push for full project"
+5.git branch -M main (renaming branch)
+6.git remote add origin https://github.com/Richa444/Academy3.git
+7.git push -u origin master
+8.rm -rf .git (to help git to untrack your repo)
+9. rm -rf your_virtualenv_directory(to remove a directory in droplet)
+10 git clone -b <branch_name> <repository_url> (clone data from right branch)
+
+
+-----
+git remote -v(to see how many branches you have)
+git remote remove origin( you should delete all origins in case if problem is while pushing the code)
+------------------------
+(extra commands)
+1.git remote add origin git remote set-url origin 
+2.git checkout -b dev  (creates new branch name dev)
+
+====================================
+
+django version issue
+1.sudo pip install django --upgrade
+2.sudo pip install psycopg2 --upgrade
+
+DOCKER
+1.sudo docker-compose build
+2.sudo docker-compose up
+
+
+
+this is docker project with no venv
